@@ -28,7 +28,7 @@ export default function CartaDeAmor() {
   useEffect(() => {
     if (stage === "open" && !flipped) {
       setShowNotice(false);
-      noticeTimer.current = setTimeout(() => setShowNotice(true), 15000);
+      noticeTimer.current = setTimeout(() => setShowNotice(true), 5000);
     }
     return () => clearTimeout(noticeTimer.current);
   }, [stage, flipped]);
@@ -299,7 +299,7 @@ export default function CartaDeAmor() {
           50% { opacity: 1; transform: scale(1.05); }
         }
         .timer-track { margin-top: 0.6rem; height: 3px; width: 100%; background: rgba(40,52,92,0.12); border-radius: 2px; overflow: hidden; }
-        .timer-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--rose)); animation: fillBar 15s linear forwards; }
+        .timer-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--rose)); animation: fillBar 5s linear forwards; }
         @keyframes fillBar { to { width: 100%; } }
 
         /* ---------- coração desenhado a mao (pagina de tras) ---------- */
